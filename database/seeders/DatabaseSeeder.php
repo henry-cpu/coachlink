@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\ProgrammeTrainingSession;
+use App\Models\TrainingSessionAssignment;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -52,13 +54,13 @@ class DatabaseSeeder extends Seeder
         // This will create 100 programs in the database
         $this->call(ProgrammeSeeder::class);
 
-        //session Seeder
-        $this->call(SessionSeeder::class);
+        //TrainingSession Seeder
+        $this->call(TrainingSessionSeeder::class);
 
-        // ProgrammeSession Seeder
-        $this->call(ProgrammeSessionSeeder::class);
+        // ProgrammeTrainingSession Seeder
+        $this->call(ProgrammeTrainingSessionSeeder::class);
 
-        //session assignment seeder
-        $this->call(SessionAssignmentSeeder::class);
+        //TrainingSession assignment seeder
+        $this->call(TrainingSessionAssignmentSeeder::class);
     }
 }

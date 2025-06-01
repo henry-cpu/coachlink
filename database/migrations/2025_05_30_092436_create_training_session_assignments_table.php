@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('session_assignments', function (Blueprint $table) {
+        Schema::create('training_session_assignments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('session_id')->constrained('sessions')->onDelete('cascade');
+            $table->foreignId('training_session_id')->constrained('training_sessions')->onDelete('cascade');
             $table->foreignId('patient_id')->constrained('users')->onDelete('cascade');
             $table->timestamp('assigned_at')->nullable();
             $table->enum('status', ['planned', 'completed', 'missed'])->default('planned');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('session_assignments');
+        Schema::dropIfExists('training_session_assignments');
     }
 };

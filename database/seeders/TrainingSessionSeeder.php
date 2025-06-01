@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Session;
+use App\Models\TrainingSession;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SessionSeeder extends Seeder
+class TrainingSessionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -36,7 +36,7 @@ class SessionSeeder extends Seeder
                 $title = fake()->randomElement(array_keys($sessionData));
                 $description = $sessionData[$title];
 
-                Session::create([
+                TrainingSession::create([
                     'coach_id' => $coach->id,
                     'title' => $title,
                     'description' => $description,
