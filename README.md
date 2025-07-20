@@ -2,6 +2,8 @@
 
 Welcome to CoachLink — a full training management platform with a complete Laravel backend.
 
+CoachLink is a smart training management platform that connects coaches and patients through personalized programs, guided sessions, and machine-based workouts. Designed for gyms, physiotherapy centers, and sports facilities, it enables efficient training planning, progress tracking, and session assignment — all within a structured Laravel backend
+
 ---
 
 ## 🚀 Tech Stack
